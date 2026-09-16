@@ -1,0 +1,11 @@
+{
+  "name": "Zone Counter",
+  "short_name": "Zone Counter",
+  "description": "Track people passing through configurable zone entrances.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#111827",
+  "orientation": "portrait-primary",
+  "icons": []
+}

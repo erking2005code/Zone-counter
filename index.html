@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Zone Counter</title>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Zone Counter</h1>
+        <p>Track people entering through each direction.</p>
+      </div>
+      <button id="installBtn" class="secondary hidden">Install</button>
+    </header>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Entrances / directions</h2>
+        <button id="addEntrance" class="secondary">＋ Add</button>
+      </div>
+      <div id="entrances" class="entrances"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Data</h2>
+        <div class="actions">
+          <button id="exportBtn" class="secondary">Export CSV</button>
+          <button id="clearBtn" class="danger">Clear</button>
+        </div>
+      </div>
+      <div id="summary" class="summary"></div>
+    </section>
+  </main>
+
+  <dialog id="personDialog">
+    <form method="dialog" id="personForm" class="dialog">
+      <h2>Person passed</h2>
+
+      <label>Gender</label>
+      <div class="choice-grid">
+        <button type="button" class="choice" data-gender="Male">Male</button>
+        <button type="button" class="choice" data-gender="Female">Female</button>
+      </div>
+
+      <label for="age">Age</label>
+      <select id="age" required>
+        <option value="">Select age range</option>
+        <option>0-10</option>
+        <option>11-20</option>
+        <option>21-30</option>
+        <option>31-40</option>
+        <option>41-50</option>
+        <option>51-60</option>
+        <option>60+</option>
+      </select>
+
+      <label class="check">
+        <input type="checkbox" id="isGroup">
+        <span>Group (2 or more people)</span>
+      </label>
+
+      <div id="groupField" class="hidden">
+        <label for="peopleCount">Number of people</label>
+        <input id="peopleCount" type="number" min="2" step="1" inputmode="numeric" placeholder="e.g. 4">
+      </div>
+
+      <div class="dialog-actions">
+        <button type="button" id="cancelDialog" class="secondary">Cancel</button>
+        <button type="submit" id="savePerson" class="primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
