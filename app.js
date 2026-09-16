@@ -160,6 +160,6 @@ $("#installBtn").addEventListener("click", async () => {
 });
 
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js", { scope: "./" }));
 }
 render();

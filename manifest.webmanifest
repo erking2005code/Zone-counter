@@ -1,11 +1,42 @@
 {
   "name": "Zone Counter",
   "short_name": "Zone Counter",
+  "id": "./",
   "description": "Track people passing through configurable zone entrances.",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f3f4f6",
   "theme_color": "#111827",
   "orientation": "portrait-primary",
-  "icons": []
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/home.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zone Counter entrance dashboard"
+    },
+    {
+      "src": "screenshots/form.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zone Counter person details form"
+    }
+  ]
 }
